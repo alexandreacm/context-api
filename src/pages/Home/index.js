@@ -3,9 +3,8 @@ import { Text } from 'react-native';
 
 import { InputText } from '../../components/atoms/InputText';
 import { InputPassword } from '../../components/molecules/InputPassword';
-import { HeaderHome as Header } from '../../components/molecules/Header';
-
-import { useAuthProvider } from '../../hooks/AuthProvider';
+import { HeaderHome as Header } from '../../components/molecules/HeaderHome'; 
+import { useAuthProvider } from '../../hooks/useAuthProvider';
 
 export function Home() {
     const { user, SignIn, SignOut } = useAuthProvider();
@@ -39,7 +38,10 @@ export function Home() {
     return (
         <>
             {/* molecules */}
-            <Header onHandleSignIn={onHandleSignIn} onHandSignOut={onHandSignOut} />
+            <Header
+                onHandleSignIn={onHandleSignIn}
+                onHandSignOut={onHandSignOut}
+            />
 
             {/* atom */}
             <Text style={{ marginBottom: 10}}> Welcome: {user && user.name}</Text>

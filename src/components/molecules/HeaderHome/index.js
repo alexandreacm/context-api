@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button} from 'react-native';
+import { Button } from 'react-native';
 
-import StyledHeader from './styles';
+import { StyledHeader } from './styles';
 
 export function HeaderHome({ onHandleSignIn, onHandSignOut }) {    
     return (
