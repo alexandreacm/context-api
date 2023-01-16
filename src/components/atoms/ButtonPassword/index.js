@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import { Ionicons as Icon } from '@expo/vector-icons';
 import { styles } from './styles';
 
-export function Button({ handleVisible, isVisible }) {
+export function ButtonPassword({ handleVisible, isVisible }) {
   return (
     <TouchableOpacity
       style={styles.button}

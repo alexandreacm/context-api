@@ -1,11 +1,11 @@
 import React, { useState }  from 'react';
-import { Text, Button } from 'react-native';
-
-import { useAuthProvider } from '../../contexts/AuthProvider';
-import { Header } from './styles';
+import { Text } from 'react-native';
 
 import { InputText } from '../../components/atoms/InputText';
 import { InputPassword } from '../../components/molecules/InputPassword';
+import { HeaderHome as Header } from '../../components/molecules/Header';
+
+import { useAuthProvider } from '../../hooks/AuthProvider';
 
 export function Home() {
     const { user, SignIn, SignOut } = useAuthProvider();
@@ -35,26 +35,23 @@ export function Home() {
         setUserName('');
         setPassword('');
     }
+    
     return (
         <>
-            <Header>
-                <Button
-                    title='SignIn'
-                    onPress={onHandleSignIn} />
-                <Button
-                    title='SignOut'
-                    onPress={onHandSignOut} />
-            </Header>
+            {/* molecules */}
+            <Header onHandleSignIn={onHandleSignIn} onHandSignOut={onHandSignOut} />
 
+            {/* atom */}
             <Text style={{ marginBottom: 10}}> Welcome: {user && user.name}</Text>
 
-
+           {/* atom */}
             <InputText
                 placeHolder='Please, type the userName'
                 value={userName}
                 onChangeText={setUserName}
             />
 
+            {/* molecules */}
             <InputPassword
                 placeHolder='Please, type the password'
                 value={password}

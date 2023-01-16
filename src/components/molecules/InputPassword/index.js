@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import { styles } from './styles';
 import { Input } from '../../atoms/Input';
-import { Button } from '../../atoms/Button';
+import { ButtonPassword } from '../../atoms/ButtonPassword';
 
 
 export function InputPassword({ placeHolder , value, onChangeText, handleVisible, isVisible}) {
@@ -18,7 +18,7 @@ export function InputPassword({ placeHolder , value, onChangeText, handleVisible
         onChangeText={onChangeText}
       />
 
-      <Button
+      <ButtonPassword
         handleVisible={handleVisible}
         isVisible={isVisible}
       />

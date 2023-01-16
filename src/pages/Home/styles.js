@@ -19,13 +19,4 @@ const StyledTypeSelectedText = styled.Text`
   color: #fff;
 `;
 
-const Header = styled.View`
-   width: 100%;
-   height: 50px;
-   margin-bottom: 10px; 
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-`;
-
-export { Background, StyledViewSelected, StyledTypeSelectedText, Header };
+export { Background, StyledViewSelected, StyledTypeSelectedText };

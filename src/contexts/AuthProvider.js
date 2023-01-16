@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 
 export const AuthContext = createContext({
   user: null,
@@ -34,9 +34,3 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export function useAuthProvider() {
-    const { user, SignIn, SignOut } = useContext(AuthContext);
-    
-    return { user, SignIn, SignOut };
-}
